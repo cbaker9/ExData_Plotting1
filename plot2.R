@@ -1,4 +1,4 @@
-#Libraries used
+#Libraries used:
 library(readr)
 library(lubridate)
 
@@ -14,9 +14,9 @@ sub_data <- subset(household_power_consumption, Date == c("1/2/2007", "2/2/2007"
 sub_data$DateTime <- strptime(paste(sub_data$Date, sub_data$Time, sep = " "), "%d/%m/%Y %H:%M:%S")
 
 # Plot the data and save .png
-plot(sub_data$DateTime, sub_data$Global_active_power, type = "l", xlab= " ", ylab = "Global Active Power (
+plot(sub_data$DateTime, sub_data$Global_active_power, type = "l", xlab= " ", ylab = "Global Active Power (kilowatts)")
      
 dev.copy(png, file = "plot2.png", height = 480, width = 480)
 dev.off()
 
-)")
+
